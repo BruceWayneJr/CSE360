@@ -20,16 +20,22 @@ public class CalculatorTest {
 	public void testgetTotal() 
 	{
 		
-		//Calculator obj = new Calculator();
-		
-		fail("Not yet implemented");
+		Calculator obj = new Calculator();
+		obj.add(5);
+		obj.add(18);
+		obj.subtract(3);
+		assertEquals("Pass",20,obj.getTotal());
+		//fail("Not yet implemented");
 	}
 	@Test
 	public void testadd() 
 	{
-		//Calculator obj = new Calculator();
-
-		fail("Not yet implemented");
+		Calculator obj = new Calculator();
+		obj.add(15);
+		obj.add(0);
+		obj.add(35);
+		assertEquals("Pass",50,obj.getTotal());
+		//fail("Not yet implemented");
 	}
 	
 
@@ -39,19 +45,30 @@ public class CalculatorTest {
 	@Test
 	public void testsubtract() 
 	{
-
-		fail("Not yet implemented");
+		Calculator obj = new Calculator();
+		obj.add(15);
+		obj.subtract(20);
+		assertEquals("Pass",-5,obj.getTotal());
+		//fail("Not yet implemented");
 	}
 	@Test	
 	public void testmultiply() 
 	{
-		//Calculator obj = new Calculator();
-	
-		fail("Not yet implemented");
+		Calculator obj = new Calculator();
+		obj.add(15);
+		obj.multiply(10);
+		assertEquals("Pass",150,obj.getTotal());
+		//fail("Not yet implemented");
 	}
 	@Test
 	public void testdivide() {
-		fail("Not yet implemented");
+		Calculator obj = new Calculator();
+		obj.add(15);
+		obj.divide(3);
+		//fail("Not yet implemented");
+		assertEquals("Pass",5,obj.getTotal());
+		obj.divide(0);
+		assertEquals("Pass",0,obj.getTotal());
 	}
 	
 	@Test
