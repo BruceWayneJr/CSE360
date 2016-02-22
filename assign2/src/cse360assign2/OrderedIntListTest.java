@@ -12,7 +12,7 @@ public class OrderedIntListTest {
 		obj.insert(10);
 		obj.insert(1);
 		assertEquals("Pass",4,obj.size());
-//		fail("FAIL!!");
+		//fail("FAIL!!");
 	}
 	@Test
 	public void testLength() 
