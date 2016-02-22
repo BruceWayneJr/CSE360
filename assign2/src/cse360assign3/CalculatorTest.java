@@ -11,7 +11,7 @@ public class CalculatorTest {
 	@Test
 	public void testCalculator() 
 	{
-		//Test if the size() returns the total size and not the length
+		//Tests if the constructor is not null
 		Calculator obj = new Calculator();
 		assertNotNull(obj);
 		
@@ -19,7 +19,7 @@ public class CalculatorTest {
 	@Test
 	public void testgetTotal() 
 	{
-		
+		//Tests if the correct total is displayed
 		Calculator obj = new Calculator();
 		obj.add(5);
 		obj.add(18);
@@ -30,6 +30,7 @@ public class CalculatorTest {
 	@Test
 	public void testadd() 
 	{
+		//Tests if the addition operation is performed as intended
 		Calculator obj = new Calculator();
 		obj.add(15);
 		obj.add(0);
@@ -38,13 +39,10 @@ public class CalculatorTest {
 		//fail("Not yet implemented");
 	}
 	
-
-	
-
-	
 	@Test
 	public void testsubtract() 
 	{
+		//Tests if the subtraction operation is performed as intended
 		Calculator obj = new Calculator();
 		obj.add(15);
 		obj.subtract(20);
@@ -54,6 +52,7 @@ public class CalculatorTest {
 	@Test	
 	public void testmultiply() 
 	{
+		//Tests if the multiply operation is performed as intended
 		Calculator obj = new Calculator();
 		obj.add(15);
 		obj.multiply(10);
@@ -61,19 +60,31 @@ public class CalculatorTest {
 		//fail("Not yet implemented");
 	}
 	@Test
-	public void testdivide() {
+	public void testdivide() 
+	{
+		//Tests if the multiply operation is performed as intended
 		Calculator obj = new Calculator();
 		obj.add(15);
 		obj.divide(3);
-		//fail("Not yet implemented");
 		assertEquals("Pass",5,obj.getTotal());
 		obj.divide(0);
 		assertEquals("Pass",0,obj.getTotal());
+		//fail("Not yet implemented");
 	}
 	
 	@Test
-	public void testgetHistory() {
-		fail("Not yet implemented");
+	public void testgetHistory() 
+	{
+		//Tests if the history of calculations are recorded accurately
+		Calculator obj = new Calculator();
+		obj.add(5);
+		obj.add(18);
+		obj.subtract(10);
+		obj.multiply(2);
+		obj.divide(2);
+		obj.divide(0);
+		assertEquals("Pass","0 + 5 + 18 - 10 * 2 / 2 / 0",obj.getHistory());
+		//fail("Not yet implemented");
 	}
 
 }
